@@ -1,0 +1,59 @@
+@media screen and (min-width: 576px) {
+  .hero .hero-img {
+    height: 384px;
+  }
+  .our-games p {
+    font-size: 10px;
+  }
+
+  /* .our-games p::before {
+    right: 37%;
+  }
+  .our-games p::after {
+    left: 37%;
+  } */
+}
+@media screen and (min-width: 768px) {
+  .our-games p::before,
+  .what-we-do p::before {
+    right: -80px;
+    width: 64px;
+    height: 2px;
+  }
+  .our-games p::after,
+  .what-we-do p::after {
+    left: -80px;
+    width: 64px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar .nav-link {
+    font-size: 14px;
+  }
+  .hero h1 {
+    font-size: 60px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .hero .hero-img {
+    height: 384px;
+  }
+}
+@keyframes move-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

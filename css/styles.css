@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Black.ttf);
+  font-weight: 900;
+}
+.smaller-text {
+  font-size: 10px;
+}
+.small-text {
+  font-size: 12px;
+}
+.med-text {
+  font-size: 14px;
+}
+.purple {
+  color: #7f22fe;
+}
+
+.border-radius-12 {
+  border-radius: 12px;
+}
+nav .logo .logo-icon {
+  width: 44px;
+  height: 44px;
+  background-image: linear-gradient(to bottom right, #7f22fe, #4f39f6);
+  box-shadow: 0 10px 15px -3px #8e51ff40, 0 4px 6px -4px #0000001a;
+}
+nav .right-menu .addContact-btn,
+.add-btn {
+  background-image: linear-gradient(to right, #7f22fe, #4f39f6);
+  transition: all 0.2s;
+}
+nav .right-menu .addContact-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px #8e51ff40, 0 4px 6px -4px #0000001a;
+}
+nav .right-menu .other-btns {
+  color: #6a7282;
+  transition: all 0.2s;
+}
+nav .right-menu .other-btns:hover {
+  background-color: #f6f3f4;
+  color: #364153;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+body {
+  background-color: #f8fafc;
+}
+.contact-info .icon {
+  width: 48px;
+  height: 48px;
+}
+.contact-info .total,
+.contact-info .fav,
+.contact-info .emergency,
+.contact-info .card,
+.fav-access,
+.emer-access {
+  border: 1px solid #f6f3f4;
+  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+}
+.contact-info .total:hover,
+.contact-info .fav:hover,
+.contact-info .emergency:hover,
+.contact-info .card:hover {
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+}
+.total .icon {
+  background-image: linear-gradient(to bottom right, #2b7fff, #155dfc);
+  box-shadow: 0 10px 15px -3px #3080ff40, 0 4px 6px -4px #3080ff40;
+}
+.fav .icon {
+  background-image: linear-gradient(to bottom right, #ffb900, #ff6900);
+  box-shadow: 0 10px 15px -3px #f99c0040, 0 4px 6px -4px #f99c0040;
+}
+.emergency .icon {
+  background-image: linear-gradient(to bottom right, #ff2056, #e7000b);
+  box-shadow: 0 10px 15px -3px #ff235740, 0 4px 6px -4px #ff235740;
+}
+.search-box input::placeholder {
+  color: #9ca3af;
+}
+/* 
+input:focus .search-box{
+  border-color: #8e51ff33;
+} */
+.contact-info .card .card-body .icon {
+  width: 56px;
+  height: 56px;
+}
+.name-icon {
+  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+  background-image: linear-gradient(to bottom right, #00bc7d, #009689);
+}
+.small-icon-fav {
+  background-color: #ffb900;
+  font-size: 6px;
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  right: -2px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.small-icon-emer {
+  background-color: #ff2056;
+  font-size: 6px;
+  width: 20px;
+  height: 20px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.i-small {
+  width: 24px;
+  height: 24px;
+  font-size: 9.5px;
+}
+.card .bellow {
+  background: #f9fafbcc;
+  border-top: 1px solid #f6f3f4;
+  border-end-end-radius: 12px;
+  border-end-start-radius: 12px;
+}
+.cont-btn {
+  width: 36px;
+  height: 36px;
+}
+.blue-bg {
+  background-color: #dbeafe;
+}
+.purple-bg {
+  background-color: #ede9fe;
+}
+.light-purple-bg {
+  background-color: #f5f3ff;
+}
+.light-green-bg {
+  background-color: #ecfdf5;
+}
+.light-rose-bg {
+  background-color: #fff1f2;
+}
+.light-gray-bg {
+  background-color: #fbf9fa;
+}
+.gray-bg {
+  background-color: #f6f3f4;
+}
+.rose-bg {
+  background-color: #ffe4e6;
+}
+.green-bg {
+  background-color: #d0fae5;
+}
+.light-amber-bg {
+  background-color: #fffbeb;
+}
+.amber-bg {
+  background-color: #fef3c6;
+}
+.gray-500 {
+  color: #6a7282;
+}
+.purple-500 {
+  color: #7f22fe;
+}
+.blue-500 {
+  color: #155dfc;
+}
+.green-500 {
+  color: #009966;
+}
+.blue-700 {
+  color: #1447e6;
+}
+.amber-400 {
+  color: #ffb900;
+}
+.rose-500 {
+  color: #ff2056;
+}
+.rose-600 {
+  color: #ec003f;
+}
+.green-btn:hover {
+  background-color: #d0fae5;
+  color: #009966;
+}
+.purple-btn:hover {
+  background-color: #ede9fe;
+  color: #7f22fe;
+}
+.yellow-btn:hover {
+  background-color: #fef3c6;
+  color: #ffb900;
+}
+.rose-btn:hover {
+  background-color: #ffe4e6;
+  color: #ff2056;
+}
+.edit-btn:hover {
+  background-color: #eef2ff;
+  color: #4f39f6;
+}
+.delete-btn:hover {
+  background-color: #fff1f2;
+  color: #ec003f;
+}
+.fav-access .card-head {
+  background-image: linear-gradient(to right, #fffbeb, #fff7ed);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.fav-access .card-body .card,
+.emer-access .card-body .card {
+  border: 1px solid #f6f3f4;
+}
+.fav-access .card-body .card:hover {
+  border: 1px solid #fee685;
+  background-color: #fffbeb;
+}
+.emer-access .card-head {
+  background-image: linear-gradient(to right, #fff1f2, #fef2f2);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.emer-access .card-body .card:hover {
+  border: 1px solid #ffccd3;
+  background-color: #fff1f2;
+}
+.light-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 3, 39, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light-container .card {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  width: 500px;
+  height: 90vh;
+}
+.camera-btn {
+  cursor: pointer;
+}
+.camera-btn:hover {
+  background-color: #ebe6e7;
+}
+#closeBtn {
+  cursor: pointer;
+}
+.light-container .card .card-heading {
+  border-bottom: 1px solid #f6f3f4;
+  background-color: white;
+}
+.light-container .card .card-body .icon {
+  background-image: linear-gradient(to bottom right, #51a2ff, #155dfc);
+  font-size: 30px;
+  width: 96px;
+  height: 96px;
+}
+form .form-control {
+  background-color: #fbf9fa;
+  border: 1px solid #e9ecef;
+}
+
+form .form-control:focus {
+  border-color: #8e51ff;
+  outline: 0;
+  box-shadow: 0 0 0 2px #8e51ff33;
+}
+textarea {
+  resize: none;
+}
+.check-box {
+  color: #7f22fe;
+  border: #d1d5dc solid 1px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+.cancel-btn:hover {
+  background-color: #ebe6e7;
+}
+.add-btn:hover {
+  box-shadow: 0 10px 15px -3px #8e51ff40, 0 4px 6px -4px #0000001a;
+}
+form .red-border {
+  background-color: #fbf9fa;
+  border: 1px solid #ec003f;
+}
