@@ -272,8 +272,8 @@ input:focus .search-box{
 .light-container .card {
   overflow-y: scroll;
   scrollbar-width: none;
-  width: 500px;
-  height: 90vh;
+  width: 400px;
+  height: 70vh;
 }
 .camera-btn {
   cursor: pointer;
