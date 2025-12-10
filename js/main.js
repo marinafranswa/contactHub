@@ -35,8 +35,9 @@ closeBtn.addEventListener("click", function () {
 cancelBtn.addEventListener("click", function () {
   closeMenu();
 });
-
-
+showScreen();
+showHeading();
+displayContact()
 saveContact.addEventListener("click", function () {
   if (term == "add") {
     Swal.fire({
@@ -62,7 +63,6 @@ if (JSON.parse(localStorage.getItem("contactList")).length > 0) {
 } else {
   contactList = [];
 }
-
 
 //add
 function setContactData(term) {
@@ -360,11 +360,11 @@ function sideMenu() {
   document.getElementById("sideMenu").innerHTML = cartona;
 }
 
-showScreen();
-showHeading();
+
 
 //display function
 function displayContact() {
+
   addFav();
   addEmerg();
   var cartona = ``;
