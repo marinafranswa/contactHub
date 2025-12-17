@@ -35,9 +35,11 @@ closeBtn.addEventListener("click", function () {
 cancelBtn.addEventListener("click", function () {
   closeMenu();
 });
-showScreen();
-showHeading();
+
+showNumbers();
+totalNumber();
 displayContact();
+
 saveContact.addEventListener("click", function () {
   if (term == "add") {
     Swal.fire({
@@ -128,68 +130,19 @@ searchBar.addEventListener("input", function () {
   displayContact();
 });
 //3cols total/fav/emerg
-function showScreen() {
+function showNumbers() {
   addFav();
   addEmerg();
-  var cartona = `<div class="col">
-              <div class="total bg-white border-radius-12 p-3 d-flex">
-                <div
-                  class="icon border-radius-12 d-flex justify-content-center align-items-center"
-                >
-                  <i class="fa-solid fa-users text-white"></i>
-                </div>
-                <div class="text ms-3">
-                  <p
-                    class="text-secondary text-uppercase small-text fw-medium my-0"
-                  >
-                    Total
-                  </p>
-                  <p class="text-dark fw-bold fs-4 my-0">${contactList.length}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="fav bg-white border-radius-12 p-3 d-flex">
-                <div
-                  class="icon border-radius-12 d-flex justify-content-center align-items-center"
-                >
-                  <i class="fa-solid fa-star text-white"></i>
-                </div>
-                <div class="text ms-3">
-                  <p
-                    class="text-secondary text-uppercase small-text fw-medium my-0"
-                  >
-                    favorites
-                  </p>
-                  <p class="text-dark fw-bold fs-4 my-0">${favList.length}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="emergency bg-white border-radius-12 p-3 d-flex">
-                <div
-                  class="icon border-radius-12 d-flex justify-content-center align-items-center"
-                >
-                  <i class="fa-solid fa-heart-pulse text-white"></i>
-                </div>
-                <div class="text ms-3">
-                  <p
-                    class="text-secondary text-uppercase small-text fw-medium my-0"
-                  >
-                    emergency
-                  </p>
-                  <p class="text-dark fw-bold fs-4 my-0">${emergList.length}</p>
-                </div>
-              </div>
-            </div>`;
-  document.getElementById("showScreen").innerHTML = cartona;
+  var total = `${contactList.length}`;
+  var fav = `  ${favList.length}`;
+  var emer = ` ${emergList.length}`;
+  document.getElementById("total").innerHTML = total;
+  document.getElementById("fav").innerHTML = fav;
+  document.getElementById("emer").innerHTML = emer;
 }
 //title
-function showHeading() {
-  var cartona = `<h2 class="fw-bold mb-0">All Contacts</h2>
-                <p class="text-secondary med-text">
-                  Manage and organize your ${contactList.length} contacts
-                </p>`;
+function totalNumber() {
+  var cartona = `${contactList.length}`;
   document.getElementById("heading").innerHTML = cartona;
 }
 //sidefav/emergency
@@ -199,7 +152,9 @@ function sideMenu() {
 
   if (favList.length > 0) {
     for (let i = 0; i < favList.length; i++) {
-      favList[i];
+      var splitName = favList[i].name.split(" ");
+      var joined = splitName[0][0] + (splitName[1]?.[0] || "");
+      console.log(joined);
       favoriteCartona += `
      <div class="col-12 col-md-6 col-xl-12">
        <div class="card border-radius-12 px-2 py-1 mb-2">
@@ -218,7 +173,7 @@ function sideMenu() {
                                    alt=""
                                  />`
                                   : `<span class="d-block fw-semibold fs-5 text-white"
-                                   >${favList[i].name.split("", 1).join(" ")}
+                                   >${joined}
                                    </span>`
                               }
                             </div>
@@ -250,6 +205,8 @@ function sideMenu() {
   }
   if (emergList.length > 0) {
     for (let i = 0; i < emergList.length; i++) {
+      var splitName = emergList[i].name.split(" ");
+      var joined = splitName[0][0] + (splitName[1]?.[0] || "");
       emergencyCartona += `
      <div class="col-12 col-md-6 col-xl-12">
        <div class="card border-radius-12 px-2 py-1 mb-2">
@@ -268,7 +225,7 @@ function sideMenu() {
                                    alt=""
                                  />`
                                      : `<span class="d-block fw-semibold fs-5 text-white"
-                                   >${emergList[i].name.split("", 1).join(" ")}
+                                   >${joined}
                                    </span>`
                                  }
                             </div>
@@ -367,6 +324,8 @@ function displayContact() {
   var cartona = ``;
   var groupCartona = ``;
   for (let i = 0; i < contactList.length; i++) {
+          var splitName = contactList[i].name.split(" ");
+          var joined = splitName[0][0] + (splitName[1]?.[0] || "");
     if (contactList[i].group == "family") {
       groupCartona = `<span class="blue-bg blue-700 smaller-text fw-medium py-1 px-2 rounded-2"
                                >${contactList[i].group}</span
@@ -413,9 +372,7 @@ function displayContact() {
                                    alt=""
                                  />`
                                    : `<span class="d-block fw-semibold fs-5 text-white"
-                                   >${contactList[i].name
-                                     .split("", 1)
-                                     .join(" ")}
+                                   >${joined}
                                    </span>`
                                }
                                  
@@ -568,8 +525,8 @@ function displayContact() {
   }
   document.getElementById("rowData").innerHTML = cartona;
   sideMenu();
-  showScreen();
-  showHeading();
+  showNumbers();
+  totalNumber();
 }
 
 //clearContact function
